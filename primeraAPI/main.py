@@ -121,6 +121,9 @@ def deleteUser(userId):
 
 @app.route('/sendemail', methods=['POST'])
 def sendEmail():
+    """
+    Function that sends an email 
+    """
     data = request.get_json()
     mailer = emails.NewEmail(os.getenv('MAILERSEND_API_KEY'))
 
